@@ -1,0 +1,117 @@
+:root {
+    --dark: #333;
+    --light: #fff;
+    --link: #ffa500;
+    --orange: #ffa500;
+}
+
+/* Reset Default Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:focus {
+    outline: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--dark);
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Common Style */
+
+button {
+    background-color: var(--orange);
+    color: var(--light);
+    border: none;
+    border-radius: 3px;
+    display: block;
+    font-weight: 700;
+    letter-spacing: 2px;
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+    background-color: var(--light);
+    width: 320px;
+    height: 40px;
+    padding: 5px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    margin: 10px;
+}
+
+input[type='radio'] {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.display-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Sign Up  And Login*/
+.login,
+.signup {
+    background-color: var(--light);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.signup .gender {
+    margin: 15px 10px;
+}
+
+.signup label {
+    color: #524f4f;
+    font-weight: 700;
+}
+.login button,
+.signup button {
+    width: 320px;
+}
+
+.login span,
+.signup span {
+    display: block;
+    font-size: 12px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.login span a,
+.signup span a {
+    color: var(--link);
+}
