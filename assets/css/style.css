@@ -2,7 +2,7 @@
     --dark: #333;
     --light: #fff;
     --link: #ffa500;
-    --orange: #ffa500;
+    --primary: #ffa500;
 }
 
 /* Reset Default Style */
@@ -37,7 +37,7 @@ body {
 /* Common Style */
 
 button {
-    background-color: var(--orange);
+    background-color: var(--primary);
     color: var(--light);
     border: none;
     border-radius: 3px;
@@ -81,6 +81,10 @@ input[type='radio'] {
     height: 100vh;
 }
 
+i.fa {
+    cursor: pointer;
+}
+
 /* Sign Up  And Login*/
 .login,
 .signup {
@@ -114,4 +118,195 @@ input[type='radio'] {
 .login span a,
 .signup span a {
     color: var(--link);
+}
+
+/* Messenger */
+
+.messenger {
+    display: inline-flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding: 20px 30px;
+}
+
+/* Contacts */
+
+.messenger .contacts {
+    /* background-color: var(--dark); */
+    padding: 10px;
+    width: 20%;
+    position: relative;
+}
+.messenger .contacts::before {
+    content: '';
+    background-color: rgba(51, 51, 51, 0.5);
+    height: 100%;
+    width: 100%;
+    filter: blur(5px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.messenger .contacts ul li {
+    color: var(--light);
+    display: inline-flex;
+    border-bottom: 1px solid #7d7b7d;
+    padding: 10px;
+    cursor: pointer;
+}
+.messenger .contacts ul li img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.messenger .contacts ul li .meta {
+    margin-top: 4px;
+}
+.messenger .contacts ul li .meta .name {
+    font-weight: 700;
+}
+.messenger .contacts ul li .meta .email {
+    font-size: 12px;
+}
+
+/* Conversation */
+
+.messenger .conversation {
+    color: var(--light);
+    width: 80%;
+}
+.messenger .conversation .top {
+    display: inline-flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    padding: 15px;
+    position: relative;
+}
+.messenger .conversation .top::before {
+    content: '';
+    background-color: rgba(51, 51, 51, 0.7);
+    height: 100%;
+    width: 100%;
+    filter: blur(5px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.messenger .conversation .top .name {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.messenger .conversation .body {
+    height: 80%;
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.messenger .conversation .body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+}
+
+.messenger .conversation .body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+}
+
+.messenger .conversation .body::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+}
+
+.messenger .conversation .body::before {
+    content: '';
+    background-color: rgba(51, 51, 51, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.messenger .conversation .body .time {
+    color: var(--light);
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    bottom: -25px;
+}
+
+.messenger .conversation .body .incoming-message,
+.messenger .conversation .body .outgoing-message {
+    display: flex;
+    width: 46%;
+    margin-bottom: 45px;
+    position: relative;
+    align-items: flex-end;
+}
+
+.messenger .conversation .body .incoming-message {
+    margin-right: auto;
+}
+
+.messenger .conversation .body .incoming-message img {
+    width: 40px;
+    height: 40px;
+}
+
+.messenger .conversation .body .incoming-message p {
+    background-color: var(--primary);
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 20px 20px 20px 0px;
+}
+
+.messenger .conversation .body .incoming-message .time {
+    color: var(--primary);
+    right: 20px;
+}
+
+.messenger .conversation .body .outgoing-message {
+    color: var(--dark);
+    margin-left: auto;
+}
+.messenger .conversation .body .outgoing-message p {
+    background-color: var(--light);
+    padding: 10px;
+    border-radius: 20px 20px 0 20px;
+}
+
+.messenger .conversation .body .outgoing-message .time {
+    left: 20px;
+}
+.messenger .conversation .bottom {
+    width: 100%;
+    height: 10%;
+    padding: 0 10px;
+}
+
+.messenger .conversation .bottom form {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    overflow: hidden;
+    width: 100%;
+}
+.messenger .conversation .bottom form input {
+    width: 70%;
+}
+.messenger .conversation .bottom form button {
+    margin: 0;
+}
+.messenger .conversation .bottom form i.fa {
+    font-size: 25px;
 }
