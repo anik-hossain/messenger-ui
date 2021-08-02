@@ -27,6 +27,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--dark);
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     height: 100vh;
@@ -309,4 +310,43 @@ i.fa {
 }
 .messenger .conversation .bottom form i.fa {
     font-size: 25px;
+}
+
+/* Users */
+.users {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.users table {
+    background: var(--primary);
+    margin: 0 auto;
+    overflow: scroll;
+}
+.users thead {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.users thead tr {
+    border-bottom: 1px solid #333;
+}
+.users th {
+    padding: 5px 10px;
+}
+
+.users tbody {
+    overflow-y: scroll;
+}
+.users tbody tr:nth-child(odd) {
+    background: #fff;
+}
+.users tbody tr:nth-child(even) {
+    background: #ddd;
+}
+.users td {
+    padding: 5px 30px;
+}
+.users td.id,
+.users td.roll {
+    font-weight: 700;
+    text-transform: capitalize;
 }
